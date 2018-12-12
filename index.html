@@ -1,21 +1,73 @@
-<html>
-	<head>
-		<title>Leaflet and Nominatim example</title>
+<html class="gr__leafletjs_com">
 
-		<link rel="stylesheet" href="js/leaflet.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="js/leaflet.ie.css" /><![endif]-->
-		<link rel="stylesheet" type="text/css" href="site.css">
+<head>
+	<title>Geocoder</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	 crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+	 crossorigin=""></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	 crossorigin="anonymous">
+	</script>
+</head>
 
-		<script src="js/leaflet.js"></script>
-		<script src="js/jquery-1.8.2.min.js"></script>
-	</head>
-	<body>
-		<div id="map"></div>
-		<div id="search">
-			<input type="text" name="addr" value="" id="addr" size="10" />
-			<button type="button" onclick="addr_search();">Search</button>
-			<div id="results"/>
+<body data-gr-c-s-loaded="true">
+		
+
+
+	<div id="mapid">
+	</div>
+
+
+
+
+
+	<div id="search">
+		<div class="searchlast">
+			<div id="pappero">
+				<input  type="text" name="addr" value="" id="addr" class="input boxstyle" placeholder="Search..." size="10">
+				<a type="button" onclick="addr_search();" id="searchicon" class="searchicon"><img src="./Images/search.svg"></a>
+				<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+			</div>
+			<a class="currentlocation boxstyle" onclick="getLocation()"><img src="./Images/location.svg"/></a>
+			
 		</div>
-		<script src="js/map.js"></script>
-	</body>
+		<div class="lastclick boxstyle">
+				<p class="lastp">Last Mouse Click Position (Click the Map)</p>
+				<p id="mouse-coord" type="text" placeholder="Last Mouse Click Position "></p>
+			</div>
+		
+		<p id="demo1"></p>
+
+		<script>
+				
+			
+			
+		
+			
+			</script>
+		
+
+		<div id="results" class="boxstyle"></div>
+		<div id="lookup" class="boxstyle"></div>
+	</div>
+
+	
+
+	<script src="map.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
 </html>
